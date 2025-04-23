@@ -1,0 +1,285 @@
+:root {
+  --primary-color: #6610f2;
+  --primary-dark: #5a0dbe;
+  --primary-light: #f1ebfe;
+  --primary-transparent: rgba(102, 16, 242, 0.2);
+  --secondary-color: #7c3aed;
+  --secondary-dark: #6d28d9;
+  --secondary-light: #f5f3ff;
+  --accent-color: #a78bfa;
+  --danger-color: #e74c3c;
+  --danger-light: #fdedec;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --text-light: #bdc3c7;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --border-light: #ecf0f1;
+  --border-medium: #d6dbdf;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition-normal: all 0.3s ease;
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-primary);
+}
+
+/* Main container spacing */
+.main-container {
+  margin: 30px auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+/* Task card styling */
+.task-card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 40px;
+  border: 1px solid var(--border-light);
+  min-height: 400px;
+}
+
+.task-list-wrapper {
+  min-height: 250px;
+  padding: 10px 0;
+}
+
+/* Header styling */
+header.bg-primary {
+  background-color: var(--primary-color) !important;
+  box-shadow: var(--shadow-sm);
+  padding: 0.75rem 0;
+}
+
+/* TaskForm styling */
+.form-control {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-medium);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem var(--primary-transparent);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.75rem 1.25rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Filter controls */
+.filter-controls .btn {
+  font-size: 0.95rem;
+  padding: 0.35rem 1rem;
+  border-radius: 6px;
+}
+
+/* Task animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+.task-list-container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Task item styling */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 1rem 1.25rem;
+  transition: background-color 0.2s ease;
+  border-color: var(--border-light);
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: var(--primary-light);
+}
+
+/* Task state visual cues */
+.completed-task {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+/* Actions dropdown styling */
+.dropdown-toggle.btn-outline-secondary {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+  padding: 0.35rem 1rem;
+}
+
+.dropdown-toggle.btn-outline-secondary:hover,
+.dropdown-toggle.btn-outline-secondary:focus {
+  background-color: var(--primary-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Form check styling */
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Improved focus styles for better accessibility */
+button:focus, 
+input:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem var(--primary-transparent);
+  outline: none;
+}
+
+/* Footer styling - simplified */
+footer {
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-light);
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Pagination styling */
+.pagination {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pagination .page-link {
+  color: var(--primary-color);
+  border-color: var(--border-light);
+  background-color: var(--bg-white);
+  padding: 0.5rem 0.75rem;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.pagination .page-link:hover {
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+  border-color: var(--border-light);
+}
+
+.pagination .page-link:focus {
+  box-shadow: 0 0 0 0.25rem var(--primary-transparent);
+}
+
+.pagination .page-item.disabled .page-link {
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+/* Tasks per page selector */
+.form-select {
+  width: auto;
+  display: inline-block;
+  padding: 0.4rem 2.25rem 0.4rem 0.75rem;
+  border-color: var(--border-light);
+}
+
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem var(--primary-transparent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .pagination .page-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Make sure mobile pagination controls are always visible */
+  .pagination-first,
+  .pagination-prev,
+  .pagination-next,
+  .pagination-last,
+  .pagination .page-item.active {
+    display: block !important;
+  }
+  
+  /* Center the active page number on mobile */
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .card-header, .card-body, .card-footer {
+    padding: 0.75rem;
+  }
+  
+  .main-container {
+    padding: 0 15px;
+  }
+  
+  .task-card {
+    margin-bottom: 20px;
+  }
+}
