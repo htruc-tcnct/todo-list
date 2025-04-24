@@ -2,6 +2,7 @@
 
 Đây là ứng dụng web quản lý công việc được xây dựng bằng React theo yêu cầu của thử thách lập trình Classmethod. Ứng dụng cho phép người dùng thêm, sửa, xóa, đánh dấu hoàn thành và lọc các công việc hàng ngày.
 
+* Bản xem trước (Live Demo): `https://taskmanager.charosnguyen.software/`
 ## Tính năng chính
 
 * Thêm công việc mới.
